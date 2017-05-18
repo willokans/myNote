@@ -22,6 +22,7 @@ public class NoteDetailActivity extends AppCompatActivity {
 
     private TextView title, date, content;
     private Button deleteButton;
+    private Button notesButton;
 
 
     @Override
@@ -33,6 +34,7 @@ public class NoteDetailActivity extends AppCompatActivity {
         date = (TextView) findViewById(R.id.detailsDataText);
         content = (TextView) findViewById(R.id.detailsTextView);
         deleteButton = (Button) findViewById(R.id.deleteButton);
+        notesButton = (Button) findViewById(R.id.notesButton);
 
 
         //receive details from previous activity
@@ -59,6 +61,16 @@ public class NoteDetailActivity extends AppCompatActivity {
             });
 
         }
+
+        //navigate back to display notes activity
+        notesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(NoteDetailActivity.this, DisplayNotesActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 }
