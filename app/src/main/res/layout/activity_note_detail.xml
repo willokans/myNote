@@ -56,16 +56,5 @@
         android:layout_marginRight="12dp"
         android:text="@string/DeleteButton" />
 
-    <Button
-        android:id="@+id/SpeakButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/speak"
-        android:layout_alignBaseline="@+id/deleteButton"
-        android:layout_alignBottom="@+id/deleteButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp" />
 
 </RelativeLayout>

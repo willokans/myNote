@@ -16,7 +16,7 @@
     <ImageView
         android:id="@+id/logoImgae"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         app:srcCompat="@mipmap/logo" />
@@ -25,56 +25,56 @@
         android:id="@+id/titleEditText"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/NoteEditText"
-        android:layout_alignStart="@+id/NoteEditText"
-        android:layout_below="@+id/logoImgae"
-        android:layout_marginTop="20dp"
-        android:layout_toLeftOf="@+id/imageButtonNote"
-        android:layout_toStartOf="@+id/imageButtonNote"
-        android:background="@android:color/darker_gray"
-        android:hint="Enter Title ..." />
+        android:background="#dbdae8"
+        android:hint="Enter Title ..."
+
+        android:layout_below="@+id/saveButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/NoteEditText"
         android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_below="@id/titleEditText"
-        android:layout_marginTop="30dp"
-        android:layout_toLeftOf="@+id/imageButtonNote"
-        android:layout_toStartOf="@+id/imageButtonNote"
-        android:background="@android:color/darker_gray"
+        android:layout_height="300dp"
+        android:background="#dbdae8"
         android:gravity="start"
-        android:hint="Enter Note ..." />
+        android:hint="Enter Note ..."
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/NoteEditText"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/NoteEditText"
-        android:text="@string/submit" />
+        android:text="@string/submit"
+        android:layout_below="@+id/logoImgae"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <Button
         android:id="@+id/noteView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/saveButton"
-        android:layout_alignLeft="@+id/NoteEditText"
-        android:layout_alignStart="@+id/NoteEditText"
-        android:text="@string/note_view" />
+        android:text="@string/note_view"
+        android:layout_below="@+id/logoImgae"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/imageButtonNote"
         android:layout_width="30dp"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/NoteEditText"
         android:onClick="onButtonNoteClick"
-        app:srcCompat="@drawable/mic1" />
+        app:srcCompat="@drawable/mic1"
+        android:layout_below="@+id/titleEditText"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
