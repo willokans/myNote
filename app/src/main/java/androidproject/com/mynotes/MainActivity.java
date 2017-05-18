@@ -27,11 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Button saveButton;
     private Button noteView;
     private DatabaseHandler dba;
-    private ImageButton micTitle;
-    private ImageButton micNote;
 
-    private EditText resultTitleText;
-    private EditText resultNoteText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
         content = (EditText) findViewById(R.id.NoteEditText);
         saveButton = (Button) findViewById(R.id.saveButton);
         noteView = (Button) findViewById(R.id.noteView);
-        resultTitleText = (EditText) findViewById(R.id.titleEditText);
-        resultNoteText = (EditText) findViewById(R.id.NoteEditText);
+
 
         //On click for save button
         saveButton.setOnClickListener(new View.OnClickListener() {
@@ -102,15 +97,6 @@ private void saveToDB() {
     }
 
 
-    public void editNote() {
-
-        //receive details from previous activity
-        Bundle extras = getIntent().getExtras();
-
-        title.setText((CharSequence) extras.get("title"));
-        content.setText("\" " + extras.getString("content") + "\" ");
-
-    }
 
 
     //Create on button click for Note
@@ -134,25 +120,6 @@ private void saveToDB() {
             Toast.makeText(MainActivity.this, "Sorry, Your devise doesn't support speech language!", Toast.LENGTH_LONG).show();
         }
     }
-
-
-    //Method to recieve speech input
-    public void onActivityResult(int request_code, int result_code, Intent i) {
-
-        super.onActivityResult(result_code, result_code, i);
-
-        switch (request_code){
-            case 100: if (result_code == RESULT_OK && i != null) {
-                ArrayList<String> result = i.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-
-                resultNoteText.setText(result.get(0));
-            }
-            break;
-        }
-    }
-
-
-
-
+    
 
 }
