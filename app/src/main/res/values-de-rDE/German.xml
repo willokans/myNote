@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Meine Notizen</string>
+        <string name="DeleteButton">Löschen</string>
+        <string name="EditButton">Bearbeiten</string>
+        <string name="AddNote">Notizen hinzufügen</string>
+        <string name="submit">einreichen</string>
+        <string name="my_notes">Meine Notizen</string>
+        <string name="Note_Deleted_Message">Hinweis gelöscht</string>
+</resources>

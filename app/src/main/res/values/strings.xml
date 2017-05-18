@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Notes</string>
+    <string name="DeleteButton">Delete</string>
+    <string name="EditButton">Edit</string>
+    <string name="AddNote">Add Note</string>
+    <string name="submit">Submit</string>
+    <string name="my_notes">My Notes</string>
+    <string name="Note_Deleted_Message">Note Deleted</string>
+    <string name="note_view">Notes</string>
+    <string name="speak">Speak</string>
+</resources>

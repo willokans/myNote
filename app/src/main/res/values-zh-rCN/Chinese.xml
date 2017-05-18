@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">我的筆記</string>
+    <string name="DeleteButton">刪除</string>
+    <string name="EditButton">編輯</string>
+    <string name="AddNote">添加備註</string>
+    <string name="submit">提交</string>
+    <string name="my_notes">我的筆記</string>
+    <string name="Note_Deleted_Message">註釋已刪除</string>
+</resources>
