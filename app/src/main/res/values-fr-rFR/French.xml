@@ -7,4 +7,7 @@
     <string name="submit">Soumettre</string>
     <string name="my_notes">Mes notes</string>
     <string name="Note_Deleted_Message">Note supprimée</string>
+    <string name="note_view">Remarques</string>
+    <string name="RegHere">Inscrivez-vous ici...</string>
+    <string name="Registers">Registre</string>
 </resources>

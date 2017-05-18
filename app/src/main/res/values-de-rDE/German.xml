@@ -7,4 +7,7 @@
         <string name="submit">einreichen</string>
         <string name="my_notes">Meine Notizen</string>
         <string name="Note_Deleted_Message">Hinweis gelöscht</string>
+        <string name="note_view">Hinweis</string>
+        <string name="RegHere">Hier registrieren...</string>
+        <string name="Registers">Registrieren</string>
 </resources>

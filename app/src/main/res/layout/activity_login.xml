@@ -54,5 +54,15 @@
         android:background="@android:color/holo_green_dark"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text="Login" />
+
+    <TextView
+        android:id="@+id/registerHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/RegHere"
+        android:layout_below="@+id/loginBtn"
+        android:layout_alignRight="@+id/loginBtn"
+        android:layout_alignEnd="@+id/loginBtn" />
 </RelativeLayout>
 

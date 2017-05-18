@@ -18,13 +18,11 @@ import java.util.Locale;
 
 import data.DatabaseHandler;
 
-public class NoteDetailActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class NoteDetailActivity extends AppCompatActivity {
 
     private TextView title, date, content;
     private Button deleteButton;
-    private Button editButton;
-    private Button speak;
-    private TextToSpeech TTS;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +33,6 @@ public class NoteDetailActivity extends AppCompatActivity implements TextToSpeec
         date = (TextView) findViewById(R.id.detailsDataText);
         content = (TextView) findViewById(R.id.detailsTextView);
         deleteButton = (Button) findViewById(R.id.deleteButton);
-        speak = (Button) findViewById(R.id.SpeakButton);
 
 
         //receive details from previous activity
@@ -63,54 +60,6 @@ public class NoteDetailActivity extends AppCompatActivity implements TextToSpeec
 
         }
 
-        //Onclick for speak button
-        speak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!TTS.isSpeaking()){
-                    HashMap<String, String> stringStringHashMap = new HashMap<String, String>();
-                    stringStringHashMap.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "Hello how are you");
-                    TTS.speak(content.getText().toString(), TextToSpeech.QUEUE_ADD,stringStringHashMap);
-                    speak.setVisibility(Button.GONE);
-                }else {
-                    TTS.stop();
-                }
-            }
-        });
-    }
-
-
-    //Method to speak words
-
-    @Override
-    public void onInit(int status) {
-        TTS.setOnUtteranceCompletedListener((TextToSpeech.OnUtteranceCompletedListener) NoteDetailActivity.this);
-
-
-    }
-
-
-
-
-    public void onUtteranceCompleted(String utteranceId) {
-
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(NoteDetailActivity.this, "Utterance completed", Toast.LENGTH_LONG).show();
-                speak.setVisibility(Button.VISIBLE);
-            }
-        });
-
-    }
-
-    protected void onDestroy() {
-        if (TTS != null) {
-            TTS.stop();
-            TTS.shutdown();
-            TTS = null;
-        }
-        super.onDestroy();
     }
 }
 

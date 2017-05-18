@@ -8,4 +8,6 @@
     <string name="Note_Deleted_Message">Note Deleted</string>
     <string name="note_view">Notes</string>
     <string name="speak">Speak</string>
+    <string name="RegHere">Register Here...</string>
+    <string name="Registers">Register</string>
 </resources>
